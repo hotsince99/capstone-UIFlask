@@ -1,6 +1,3 @@
-# capstone-UIFlask
-Created as part of Capstone Project for Algoritma Academy Data Analytics Specialization
-
 # Google Play Store Analytics
 
 ## Introduction
