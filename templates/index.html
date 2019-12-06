@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='my_css.css') }}">
+</head>
+
+<body>
+    <!-- this for the box that countaints our plot -->
+    <div class="container-fluid"> 
+        <div class="jumbotron col-12 offset-0">
+            <h1 class="mb-2">Google Play Store Analysis</h1>  <!-- You can change the title here -->
+            <div class="col-md-10 col-lg-7 col-sm-10">
+                <h2 class='lead'>Which Top 5 Categories rules in the market?</h2>
+                <div class="plot-area" id="vis_scatter"></div>
+            </div>
+            <div class="col-lg-5 col-md-10 col-sm-10">
+                <div class="card card-stats">
+                    <div class="card-header card-header-warning card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">local_hospital</i>
+                        </div>
+                        <p class="card-category">Most Category</p>
+                        <h3 class="card-title">{{ stats['most_categories'] }}</h3>
+                    </div>
+                </div>
+            </div>
+        
+        <!-- This for the data table -->
+            <h2 class='lead'>Data Ramen</h2>
+            <div class=page>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    {{ new_tables|safe }}
+                </table>
+            </div>
+            {{ pagination.links }}
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.3.1/vega.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.6.0/vega-lite.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.20.0/vega-embed.min.js"></script>
+
+<!-- This part is script for rendering the plot (Altair) -->
+<script type="text/javascript">
+    function parse(url, div) {
+        var opt = {
+            mode: "vega-lite",
+            renderer: "svg",
+            actions: { export: false, source: false, editor: false }
+        };
+        //var spec = "https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json";
+
+        vegaEmbed(div, url, opt).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+    }
+    // parse("/", "#map_vis") // This is the path you put the plot, if nessesary you only need to change this at all part 
+    parse("/charts", "#vis_scatter")
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+</html>
