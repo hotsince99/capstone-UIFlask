@@ -21,15 +21,14 @@ The google play store data consists of the following variables:
 
 ## Rubrics
 ### Data Preproses and Exploratory Data Analysis
-- Demonstrated how to apply some data preprocess to make sure that your data is “ready”, such as change the data types to the proper format, handling duplicate data and missing values, drop wrong row, and changes row values.
-- Demonstrated how to split row values into two parts and save them to a new column. 
+- Demonstrated how to apply some data preprocess to make sure that your data is “ready”, such as change the data types to the proper format, handling duplicate data and missing values, drop wrong row, and changes row values. 
 
 ### Data Wrangling
 - Apply group by and cross tab to make new data frames.
 
 ### Data Visualization
-- Duplicate or reproduce plot that visualize which top 10 catgegories rules in playstore market using bar plot 
-- Duplicate or reproduce plot that visualize primary genre and secondary genre of application using stacked bar plot. 
+- Duplicate or reproduce plot that visualize which top 10 categories rules in playstore market using bar plot 
+- Duplicate or reproduce plot that visualize distribution of application seen from the number of reviews, ratings, and the number of users who install 
 
 ### Build Flask App
 - Demonstrated how to create new instance from Flask class
