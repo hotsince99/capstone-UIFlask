@@ -19,15 +19,22 @@ The google play store data consists of the following variables:
 - `Current Ver` : Current version of the app available on Play Store (as when scraped)   
 - `Android Ver` : Min required Android version (as when scraped)  
 
+## Dependencies
+- Flask
+- Matplotlib
+- Pandas
+Semua modul tersebut dapat Anda install pada file `requirements.txt`
+
 ## Rubrics
+Pada capstone ini, Anda diharapkan untuk dapat membangun sebuah aplikasi Flask yang fokus pada tampilan user interface. Langkah pertama yang harus Anda lakukan adalah silahkan download atau clone repositori ini. File pada repositori ini merupakan sebuah skeleton untuk membuat sebuah dashboard aplikasi Flask. Pada bagian `app.py` dan `templates/index.html` ada beberapa bagian yang rumpang dan harus Anda lengkapi. Beberapa bagian yang harus diperhatikan adalah sebagai berikut:
 ### Data Preproses and Exploratory Data Analysis
-- Demonstrated how to apply some data preprocess to make sure that your data is “ready”, such as change the data types to the proper format, handling duplicate data and missing values, drop wrong row, and changes row values. 
+Pada tahap praproses ini, Anda diminta untuk melengkapi praproses data seperti menghapus data yang duplikat, mengubah tipe data dan memodifikasi nilai data. Pada file `app.py` Anda diminta untuk melengkapi data yang rumpang tanpa mengubah alur praproses yang telah ada.
 
 ### Data Wrangling
-- Apply group by and cross tab to make new data frames.
+- 
 
 ### Data Visualization
-- Duplicate or reproduce plot that visualize which top 10 categories rules in playstore market using bar plot 
+- Buat atau duplikat bar plot yang menggambarkan  
 - Duplicate or reproduce plot that visualize distribution of application seen from the number of reviews, ratings, and the number of users who install 
 
 ### Build Flask App
