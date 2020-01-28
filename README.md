@@ -29,17 +29,19 @@ Semua modul tersebut dapat Anda install pada file `requirements.txt`
 Pada capstone ini, Anda diharapkan untuk dapat membangun sebuah aplikasi Flask yang fokus pada tampilan user interface. Langkah pertama yang harus Anda lakukan adalah silahkan download atau clone repositori ini. File pada repositori ini merupakan sebuah skeleton untuk membuat sebuah dashboard aplikasi Flask. Pada bagian `app.py` dan `templates/index.html` ada beberapa bagian yang rumpang dan harus Anda lengkapi. Beberapa bagian yang harus diperhatikan adalah sebagai berikut:
 ### Data Preproses and Exploratory Data Analysis
 Pada tahap praproses ini, Anda diminta untuk melengkapi praproses data seperti menghapus data yang duplikat, mengubah tipe data dan memodifikasi nilai data. Pada file `app.py` Anda diminta untuk melengkapi data yang rumpang tanpa mengubah alur praproses yang telah ada.
-
 ### Data Wrangling
 - 
 
 ### Data Visualization
-- Buat atau duplikat bar plot yang menggambarkan  
-- Duplicate or reproduce plot that visualize distribution of application seen from the number of reviews, ratings, and the number of users who install 
+- Membuat atau menduplikasi bar plot yang menggambarkan top 5 Category pada Google Playstore
+- Membuat atau menduplikasi scatter plot yang menggambarkan sebaran aplikasi jika dilihat berdasarkan Review, Rating, dan jumlah aplikasi yang terinstall.
+- Membuat atau menduplikasi histogram plot untuk melihat distribusi ukuran aplikasi 
+- Membuat bar plot yang menggambarkan tipe harga aplikasi di Google Playstore
+
+*Notes : Anda dapat melihat contoh plot lain yang hraus dibuat/diduplikat pada repositori ini. Silahkan clone/download repositori ini. 
 
 ### Build Flask App
-- Demonstrated how to create new instance from Flask class
+
 - Demonstrated how to route and make view function for plotting 
-- Demonstrated how to create templates for main page in Flask application
-- Demonstrated how to render table and plot to html page
+- Demonstrated how to render plot to html page
 - Demonstrated how to run Flask application in local host
