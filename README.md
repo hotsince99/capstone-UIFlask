@@ -41,7 +41,7 @@ playstore.Installs = ________.apply(lambda x: x.replace(______))
 ```
 ### Data Wrangling
 - Pada tahap ini Anda diminta untuk melakukan grouping dan agregasi data. Data wrangling digunakan untuk menyiapkan data yang tepat sesuai analisis yang diminta. Pada capstone ini terdapat objek dictionary dengan nama `stats` dan Anda diminta untuk melengkapi bagian yang rumpang agar menghasilkan data/nilai yang sesuai. Sebagai gambaran pada objek `stats` terdapat variabel `rev_tablel` dimana Anda harus melakukan grouping dan agregasi data yang digunakan untuk membuat data table seperti di bawah ini:
-![](table_rev.PNG)
+<img src="table_rev" width=400>
 
 ### Data Visualization
 - Membuat atau menduplikasi bar plot yang menggambarkan top 5 Category pada Google Playstore
