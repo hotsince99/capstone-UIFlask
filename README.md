@@ -29,8 +29,18 @@ Semua modul tersebut dapat Anda install pada file `requirements.txt`
 Pada capstone ini, Anda diharapkan untuk dapat membangun sebuah aplikasi Flask yang fokus pada tampilan user interface. Langkah pertama yang harus Anda lakukan adalah silahkan download atau clone repositori ini. File pada repositori ini merupakan sebuah skeleton untuk membuat sebuah dashboard aplikasi Flask. Pada bagian `app.py` dan `templates/index.html` ada beberapa bagian yang rumpang dan harus Anda lengkapi. Beberapa bagian yang harus diperhatikan adalah sebagai berikut:
 ### Data Preproses and Exploratory Data Analysis
 Pada tahap praproses ini, Anda diminta untuk melengkapi praproses data seperti menghapus data yang duplikat, mengubah tipe data dan memodifikasi nilai data. Pada file `app.py` Anda diminta untuk melengkapi data yang rumpang tanpa mengubah alur praproses yang telah ada.
+Berikut ini contoh bagian yang harus Anda lengkapi saat praproses data:
+```
+playstore._________(subset ="_____", keep = '_____', inplace=True) 
+playstore.drop([10472], inplace=True)
+# Buang tanda koma(,) dan tambah(+) kemudian ubah tipe data menjadi integer
+playstore.Category = playstore.Category.astype('category')
+playstore.Installs = ________.apply(lambda x: x.replace(______))
+playstore.Installs = ________.apply(lambda x: x.replace(______))
+```
 ### Data Wrangling
-- 
+- Pada tahap ini Anda diminta untuk melakukan grouping dan agregasi data. Data wrangling digunakan untuk menyiapkan data yang tepat sesuai analisis yang diminta. Pada capstone ini terdapat objek dictionary dengan nama `stats` dan Anda diminta untuk melengkapi bagian yang rumpang agar menghasilkan data/nilai yang sesuai. Sebagai gambaran pada objek `stats` terdapat variabel `rev_tablel` dimana Anda harus melakukan grouping dan agregasi data yang digunakan untuk membuat data table seperti di bawah ini:
+![]('rev_table.png')
 
 ### Data Visualization
 - Membuat atau menduplikasi bar plot yang menggambarkan top 5 Category pada Google Playstore
@@ -41,7 +51,11 @@ Pada tahap praproses ini, Anda diminta untuk melengkapi praproses data seperti m
 *Notes : Anda dapat melihat contoh plot lain yang hraus dibuat/diduplikat pada repositori ini. Silahkan clone/download repositori ini. 
 
 ### Build Flask App
-
-- Demonstrated how to route and make view function for plotting 
-- Demonstrated how to render plot to html page
-- Demonstrated how to run Flask application in local host
+Mengacu pada poin ke empat Data Visualization di atas, selain membuat bar plot Anda harus mendemonstrasikan bagaimana cara merender plot tersebut pada aplikasi Flask dan menampilkannya pada templates / halaman html. Yang perlu Anda perhatikan adalah pada bagian `app.py`:
+```
+render_templates(__________)
+```
+dan pada `templates/index.html` Anda perlu memanggil source plot.png tempat Anda menyimpan gambar plot tersebut.
+```
+<img src="________________________" height="450" width=500>
+```
