@@ -24,7 +24,10 @@ The google play store data consists of the following variables:
 - Matplotlib
 - Pandas
 
-Semua modul tersebut dapat Anda install pada file `requirements.txt`
+Semua modul tersebut dapat Anda install dengan cara :
+```
+pip install -r requirements.txt
+```
 
 ## Rubrics
 Pada capstone ini, Anda diharapkan untuk dapat membangun sebuah aplikasi Flask yang fokus pada tampilan user interface. Langkah pertama yang harus Anda lakukan adalah silahkan download atau clone repositori ini. File pada repositori ini merupakan sebuah skeleton untuk membuat sebuah dashboard aplikasi Flask. Pada bagian `app.py` dan `templates/index.html` ada beberapa bagian yang rumpang dan harus Anda lengkapi. Beberapa bagian yang harus diperhatikan adalah sebagai berikut:
@@ -47,12 +50,12 @@ playstore.Installs = ________.apply(lambda x: x.replace(______))
 - Membuat atau menduplikasi bar plot yang menggambarkan top 5 Category pada Google Playstore
 - Membuat atau menduplikasi scatter plot yang menggambarkan sebaran aplikasi jika dilihat berdasarkan Review, Rating, dan jumlah aplikasi yang terinstall.
 - Membuat atau menduplikasi histogram plot untuk melihat distribusi ukuran aplikasi 
-- Membuat bar plot yang menggambarkan tipe harga aplikasi di Google Playstore
+- Membuat 1 plot tambahan bebas yang dapat merepresentasikan insight di dalam data
 
 *Notes : Anda dapat melihat contoh plot lain yang hraus dibuat/diduplikat pada repositori ini. Silahkan clone/download repositori ini. 
 
 ### Build Flask App
-Mengacu pada poin ke empat Data Visualization di atas, selain membuat bar plot Anda harus mendemonstrasikan bagaimana cara merender plot tersebut pada aplikasi Flask dan menampilkannya pada templates / halaman html. Yang perlu Anda perhatikan adalah pada bagian `app.py`:
+Mengacu pada poin ke empat Data Visualization di atas, selain membuat plot baru Anda harus mendemonstrasikan bagaimana cara merender plot tersebut pada aplikasi Flask dan menampilkannya pada templates / halaman html. Yang perlu Anda perhatikan adalah pada bagian `app.py`:
 ```
 render_templates(__________)
 ```
