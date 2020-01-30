@@ -1,23 +1,23 @@
 # Google Play Store Analytics
 
 ## Introduction
-The Play Store apps data has enormous potential to drive app-making businesses to success. Actionable insights can be drawn for developers to work on and capture the Android market. Using this dataset we are going to analysis as a developer, we should know the best constraints to focus on when launching our first app. And we definitely have no intention of getting lost in this vast ocean of versatile apps.
+Projek ini dikembangkan sebagai salah satu capstone project dari Algoritma Academy Data Analytics Specialization. Deliverables yang diharapkan adalah Anda dapat membangun sebuah aplikasi web sederhana (dashboard) menggunakan framework Flask. Capstone ini akan fokus pada tampilan user interface Flask. 
 
 ## Data Summary
-The google play store data consists of the following variables:
-- `App` : Application name                
-- `Category` : Category the app belongs to
-- `Rating` : Overall user rating of the app (as when scraped)
-- `Reviews` : Number of user reviews for the app (as when scraped)         
-- `Size` : Size of the app (as when scraped)           
-- `Installs` : Number of user downloads/installs for the app (as when scraped)     
-- `Type` : Paid or Free           
-- `Price` : Price of the app (as when scraped)        
-- `Content Rating` : Age group the app is targeted at - Children / Mature 21+ / Adult   
-- `Genres` : An app can belong to multiple genres (apart from its main category). For eg, a musical family game will belong to Music, Game, Family genres.        
-- `Last Updated` : Date when the app was last updated on Play Store (as when scraped) 
-- `Current Ver` : Current version of the app available on Play Store (as when scraped)   
-- `Android Ver` : Min required Android version (as when scraped)  
+Data yang digunakan pada capstone project ini adalah data hasil scraping dari Google Playstore App. Data Google Playstore App terdiri dari beberapa variabe dengan rincian sebagai berikut:
+- `App` : Nama aplikasi                
+- `Category` : Kategori aplikasi
+- `Rating` : Rating keseluruhan yang diberikan oleh user aplikasi(ketika di scrap)
+- `Reviews` : Jumlah review yang diberikan oleh user aplikasi(ketika di scrap)
+- `Size` : Ukuran aplikasi(ketika di scrap)           
+- `Installs` : Jumlah user yang menginstall/mendownload aplikasi(Ketika di scrap)     
+- `Type` : Tipe aplikasi (berbayar/gratis)       
+- `Price` : Harga aplikasi (ketika di scrap)        
+- `Content Rating` : Kelompok usia aplikasi ini ditargetkan - Children / Mature 21+ / Adult   
+- `Genres` : Genre aplikasi.        
+- `Last Updated` : Tanggal kapan aplikasi terakhir diperbarui di Play Store (ketika discrap) 
+- `Current Ver` : Versi aplikasi saat ini tersedia di Play Store (ketika discrap)   
+- `Android Ver` : Minimum versi Android yang diperlukan (ketika discrap) 
 
 ## Dependencies
 - Flask
