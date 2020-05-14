@@ -9,17 +9,23 @@ app = Flask(__name__)
 
 # bacalah file `googleplaystore.csv` data dan simpan ke objek dataframe dengan nama playstore
 playstore = ____________________________
-# Hapus data yang duplikat berdasarkan kolom App, dengan tetap mempertahankan data pertama
-playstore._________(__________________) 
+
+# Hapus data yang duplikat berdasarkan kolom App, dengan tetap keep data pertama (hint : gunakan parameter subset)
+playstore._________(subset = ___________________) 
+
 # bagian ini untuk menghapus row 10472 karena nilai data tersebut tidak tersimpan pada kolom yang benar
 playstore.drop([10472], inplace=True)
+
 # Cek tipe data kolom Category. Jika masih tersimpan dengan format tipe data yang salah, ubah ke tipe data yang sesuai
 playstore.Category = ___________________________
+
 # Pada kolom Installs Buang tanda koma(,) dan tanda tambah(+) kemudian ubah tipe data menjadi integer
+playstore.Installs = ________.apply(lambda x: x.replace(______))
 ________________ = ________.apply(lambda x: x.replace(______))
-________________ = ________.apply(lambda x: x.replace(______))
+# bagian untuk mengubah tipe data Installs
 ________________ = __________________________________
 
+# Bagian ini untuk merapikan kolom Size, Anda tidak perlu mengubah apapun di bagian ini
 playstore['Size'].replace('Varies with device', np.nan, inplace = True ) 
 playstore.Size = (playstore.Size.replace(r'[kM]+$', '', regex=True).astype(float) * \
              playstore.Size.str.extract(r'[\d\.]+([KM]+)', expand=False)
@@ -30,6 +36,7 @@ playstore['Size'].fillna(playstore.groupby('Category')['Size'].transform('mean')
 # Pada kolom Price, buang karakater $ pada nilai Price lalu ubah tipe datanya menjadi float
 ________ = _______.apply(lambda x: x.replace(______))
 ________ = __________________________________
+
 # Ubah tipe data Reviews, Size, Installs ke dalam tipe data integer
 ___________________________________________________________________________________
 
@@ -70,7 +77,8 @@ def index():
     fig = plt.figure(figsize=(8,3),dpi=300)
     fig.add_subplot()
     # bagian ini digunakan untuk membuat bar plot
-    plt.bar(x=____,y=____, color=my_colors)
+    # isi variabel x dan y yang telah di definisikan di atas
+    plt.barh(____,_____, color=my_colors)
     # bagian ini digunakan untuk menyimpan plot dalam format image.png
     plt.savefig('cat_order.png',bbox_inches="tight") 
 
@@ -86,11 +94,12 @@ def index():
     ## Scatter Plot
     # Buatlah scatter plot untuk menampilkan hubungan dan persebaran apalikasi dilihat dari Review vs Rating.
     # Ukuran scatter menggambarkan berapa banyak pengguna yang telah menginstall aplikasi 
-    X = df2[______].values
-    Y = df2[______].values
-    area_size = playstore[_______].values/10000000
+    X = df2[______].values # axis x
+    Y = df2[______].values # axis y
+    area = playstore[_______].values/10000000 # ukuran besar/kecilnya lingkaran scatter plot
     fig = plt.figure(figsize=(5,5))
     fig.add_subplot()
+    # isi nama method untuk scatter plot, variabel x, dan variabel y
     plt._______(x=_____,y=______, s=area, alpha=0.3)
     plt.xlabel('Reviews')
     plt.ylabel('Rating')
@@ -108,7 +117,7 @@ def index():
     X=(___________/1000000).values
     fig = plt.figure(figsize=(5,5))
     fig.add_subplot()
-    plt._______(_____,_______, density=True,  alpha=0.75)
+    plt._______(_____,bins=100, density=True,  alpha=0.75)
     plt.xlabel('Size')
     plt.ylabel('Frequency')
     plt.savefig('hist_size.png',bbox_inches="tight")
