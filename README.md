@@ -35,10 +35,12 @@ Pada capstone ini, Anda diharapkan untuk dapat membangun sebuah aplikasi Flask y
 
 ### 1. Setting Repository Github dan Environment (2 poin)
 - Repository 
+
 a. Membuat repository baru di Github
 
 b. Clone repository tersebut ke local dengan git clone
 - Environment 
+
 a. Created virtual environment called "flask_ui"
 
 b. Install packages: pandas, flask, matplotlib, dan numpy
