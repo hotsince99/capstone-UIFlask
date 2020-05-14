@@ -23,6 +23,7 @@ Data yang digunakan pada capstone project ini adalah data hasil scraping dari Go
 - Flask
 - Matplotlib
 - Pandas
+- Numpy
 
 Semua modul tersebut dapat Anda install dengan cara :
 ```
@@ -34,11 +35,13 @@ Pada capstone ini, Anda diharapkan untuk dapat membangun sebuah aplikasi Flask y
 
 ### 1. Setting Repository Github dan Environment (2 poin)
 - Repository 
-Membuat repository baru di Github
-Clone repository tersebut ke local dengan git clone
+a. Membuat repository baru di Github
+
+b. Clone repository tersebut ke local dengan git clone
 - Environment 
-Created virtual environment called "flask_ui"
-Install packages: pandas, flask, matplotlib, dan numpy
+a. Created virtual environment called "flask_ui"
+
+b. Install packages: pandas, flask, matplotlib, dan numpy
 
 ### 2. Data Preproses and Exploratory Data Analysis (2 poin)
 Pada tahap praproses ini, Anda diminta untuk melengkapi praproses data seperti menghapus data yang duplikat, mengubah tipe data dan memodifikasi nilai data. Pada file `app.py` Anda diminta untuk melengkapi data yang rumpang tanpa mengubah alur praproses yang telah ada.
