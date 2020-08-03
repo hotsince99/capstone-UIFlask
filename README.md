@@ -58,7 +58,7 @@ playstore.Installs = ________.apply(lambda x: x.replace(______))
 ```
 ### 3. Data Wrangling (4 poin)
 - Pada tahap ini Anda diminta untuk melakukan grouping dan agregasi data. Data wrangling digunakan untuk menyiapkan data yang tepat sesuai analisis yang diminta. Pada capstone ini terdapat objek dictionary dengan nama `stats` dan Anda diminta untuk melengkapi bagian yang rumpang agar menghasilkan data/nilai yang sesuai. Sebagai gambaran pada objek `stats` terdapat variabel `rev_tablel` dimana Anda harus melakukan grouping dan agregasi data yang digunakan untuk membuat data table seperti di bawah ini:
-<img src="table_rev.PNG" width=400>
+<img src="https://raw.githubusercontent.com/fafilia/capstone-UIFlask/master/table_rev.PNG" width=400>
 
 ### 4. Data Visualization (4 poin)
 - Membuat atau menduplikasi bar plot yang menggambarkan top 5 Category pada Google Playstore
