@@ -28,7 +28,7 @@ ________________ = __________________________________
 # Bagian ini untuk merapikan kolom Size, Anda tidak perlu mengubah apapun di bagian ini
 playstore['Size'].replace('Varies with device', np.nan, inplace = True ) 
 playstore.Size = (playstore.Size.replace(r'[kM]+$', '', regex=True).astype(float) * \
-             playstore.Size.str.extract(r'[\d\.]+([KM]+)', expand=False)
+             playstore.Size.str.extract(r'[\d\.]+([kM]+)', expand=False)
             .fillna(1)
             .replace(['k','M'], [10**3, 10**6]).astype(int))
 playstore['Size'].fillna(playstore.groupby('Category')['Size'].transform('mean'),inplace = True)
