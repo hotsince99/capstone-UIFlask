@@ -43,7 +43,20 @@ b. Clone repository tersebut ke local dengan git clone
 
 a. Created virtual environment called "flask_ui"
 
+Hal pertama yang harus dilakukan adalah melakukan pengaturan environment conda. Untuk menyiapkan conda environment dan kernel, silahkan gunakan command berikut:
+```
+conda env create -n <ENV_NAME> python=3.7
+conda activate <ENV_NAME>
+
+conda install ipykernel
+python -m ipykernel install --user --name <ENV_NAME>
+```
+
 b. Install packages: pandas, flask, matplotlib, dan numpy
+Seluruh dependecies telah di-export ke dalam file requirements.txt. Oleh karena itu untuk melakukan install packages, Anda dapat menggunakan perintah berikut:
+```
+pip install -r requirements.txt --user
+```
 
 ### 2. Data Preproses and Exploratory Data Analysis (2 poin)
 Pada tahap praproses ini, Anda diminta untuk melengkapi praproses data seperti menghapus data yang duplikat, mengubah tipe data dan memodifikasi nilai data. Pada file `app.py` Anda diminta untuk melengkapi data yang rumpang tanpa mengubah alur praproses yang telah ada.
