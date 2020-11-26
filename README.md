@@ -45,7 +45,7 @@ a. Created virtual environment called "flask_ui"
 
 Hal pertama yang harus dilakukan adalah melakukan pengaturan environment conda. Untuk menyiapkan conda environment dan kernel, silahkan gunakan command berikut:
 ```
-conda env create -n <ENV_NAME> python=3.7
+conda create -n <ENV_NAME> python=3.7
 conda activate <ENV_NAME>
 
 conda install ipykernel
